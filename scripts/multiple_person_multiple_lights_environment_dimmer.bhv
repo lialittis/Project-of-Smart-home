@@ -1,0 +1,59 @@
+<behavior startdate="27/10/2011-00:00:00" factor="1440">
+	 
+	<create-zone id="kitchen"  leftX="410" topY="370" X-Length="245" Y-Length="210" />	 
+	<add-zone-variable zoneId="kitchen" variable="Illuminance" />
+	<modify-zone-variable zoneId="kitchen" variable="Illuminance" value="0"/>
+	
+	<create-device id="Pres-A1255D-D" type="iCasa.PresenceSensor" />
+	<create-device id="BiLi-A7496W-S" type="iCasa.BinaryLight" />
+	<create-device id="DL-A0001W-S" type="iCasa.DimmerLight" />
+	<create-device id="Add-1-BL" type="iCasa.BinaryLight"/>
+	<move-device-zone deviceId="Pres-A1255D-D" zoneId="kitchen" />
+	<move-device-zone deviceId="BiLi-A7496W-S" zoneId="kitchen" />
+	<move-device-zone deviceId="Add-1-BL" zoneId="kitchen" />
+	<move-device-zone deviceId="DL-A0001W-S" zoneId="kitchen" />
+
+	<create-zone id="livingroom" leftX="410" topY="28" X-Length="245" Y-Length="350" />
+	<add-zone-variable zoneId="livingroom" variable="Illuminance" />
+	<modify-zone-variable zoneId="livingroom" variable="Illuminance" value="0"/>
+	
+	<create-device id="Pres-B1255D-D" type="iCasa.PresenceSensor" />
+	<create-device id="BiLi-B7496W-S" type="iCasa.BinaryLight" />
+	<create-device id="Add-2-BL" type="iCasa.BinaryLight"/>
+	<create-device id="DL-A0002W-S" type="iCasa.DimmerLight" />
+	<move-device-zone deviceId="Pres-B1255D-D" zoneId="livingroom" />
+	<move-device-zone deviceId="BiLi-B7496W-S" zoneId="livingroom" />
+	<move-device-zone deviceId="Add-2-BL" zoneId="livingroom" />
+	<move-device-zone deviceId="DL-A0002W-S" zoneId="livingroom" />
+	
+	<create-zone id="bedroom"  leftX="55" topY="370" X-Length="259" Y-Length="210" />		
+	<add-zone-variable zoneId="bedroom" variable="Illuminance" />
+	<modify-zone-variable zoneId="bedroom" variable="Illuminance" value="0"/>
+	
+	<create-device id="Pres-C1255D-D" type="iCasa.PresenceSensor" />
+	<create-device id="BiLi-C7496W-S" type="iCasa.BinaryLight" />
+	<create-device id="Add-3-BL" type="iCasa.BinaryLight"/>
+	<create-device id="DL-A0003W-S" type="iCasa.DimmerLight" />
+	<move-device-zone deviceId="Pres-C1255D-D" zoneId="bedroom" />
+	<move-device-zone deviceId="BiLi-C7496W-S" zoneId="bedroom" />
+	<move-device-zone deviceId="Add-3-BL" zoneId="bedroom" />
+	<move-device-zone deviceId="DL-A0003W-S" zoneId="bedroom" />
+	
+	<create-zone id="bathroom"  leftX="55" topY="20" X-Length="260" Y-Length="350" />	
+	<add-zone-variable zoneId="bathroom" variable="Illuminance" />
+	<modify-zone-variable zoneId="bathroom" variable="Illuminance" value="0"/>
+	
+	<create-device id="Pres-D1255D-D" type="iCasa.PresenceSensor" />
+	<create-device id="BiLi-D7496W-S" type="iCasa.BinaryLight" />
+	<create-device id="Add-4-BL" type="iCasa.BinaryLight"/>
+	<create-device id="DL-A0004W-S" type="iCasa.DimmerLight" />
+	<move-device-zone deviceId="Pres-D1255D-D" zoneId="bathroom" />
+	<move-device-zone deviceId="BiLi-D7496W-S" zoneId="bathroom" />
+	<move-device-zone deviceId="Add-4-BL" zoneId="bathroom" />
+	<move-device-zone deviceId="DL-A0004W-S" zoneId="bathroom" />	
+
+	<create-person id="Bob" type="Grandfather" />
+	<create-person id="Alice" type="Grandmother" />
+                
+
+</behavior>

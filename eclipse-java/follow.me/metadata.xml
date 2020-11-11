@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo xmlns="org.apache.felix.ipojo">
+  <component classname="org.example.follow.me.FollowMeImpl" name="FollowMe">
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.light.BinaryLight" field="binaryLights">
+      <callback method="bindBinaryLight" type="bind"/>
+      <callback method="unbindBinaryLight" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.presence.PresenceSensor" field="presenceSensors">
+      <callback method="bindPresenceSensor" type="bind"/>
+      <callback method="unbindPresenceSensor" type="unbind"/>
+    </requires>
+    <callback method="start" transition="validate"/>
+    <callback method="stop" transition="invalidate"/>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.light.DimmerLight" field="dimmerLights">
+      <callback method="bindDimmerLight" type="bind"/>
+      <callback method="unbindDimmerLight" type="unbind"/>
+    </requires>
+    <provides specifications="org.example.follow.me.configuration.FollowMeConfiguration"/>
+    <requires specification="fr.liglab.adele.icasa.service.preferences.Preferences" field="preferencesService"/>
+    <requires specification="fr.liglab.adele.icasa.service.location.PersonLocationService" field="LocationService"/>
+  </component>
+  <instance component="FollowMe" name="follow.me"/>
+</ipojo>
